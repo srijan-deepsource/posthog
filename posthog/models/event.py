@@ -286,6 +286,7 @@ class Event(models.Model):
         indexes = [
             models.Index(fields=["elements_hash"]),
             models.Index(fields=["timestamp", "team_id", "event"]),
+            models.Index(fields=["distinct_id"]),
             # Separately managed:
             # models.Index(fields=["created_at"]),
         ]
